@@ -1,9 +1,6 @@
 [
-  {"left-top" : "砚清钦墨" , "left-bottom" : "14.2万粉丝" , "nei-top-center" : "分享单曲：", "nei-top-right" : "+关注", "words" : "中国女人之美，在骨不在皮"},
-  {"left-top" : "砚清钦墨" , "left-bottom" : "14.2万粉丝" , "nei-top-center" : "分享单曲：", "nei-top-right" : "+关注", "words" : "中国女人之美，在骨不在皮"},
-  {"left-top" : "砚清钦墨" , "left-bottom" : "14.2万粉丝" , "nei-top-center" : "分享单曲：", "nei-top-right" : "+关注", "words" : "中国女人之美，在骨不在皮"},
-  {"left-top" : "砚清钦墨" , "left-bottom" : "14.2万粉丝" , "nei-top-center" : "分享单曲：", "nei-top-right" : "+关注", "words" : "中国女人之美，在骨不在皮"},
-  {"left-top" : "砚清钦墨" , "left-bottom" : "14.2万粉丝" , "nei-top-center" : "分享单曲：", "nei-top-right" : "+关注", "words" : "中国女人之美，在骨不在皮"},
-  {"left-top" : "砚清钦墨" , "left-bottom" : "14.2万粉丝" , "nei-top-center" : "分享单曲：", "nei-top-right" : "+关注", "words" : "中国女人之美，在骨不在皮"},
-  {"left-top" : "砚清钦墨" , "left-bottom" : "14.2万粉丝" , "nei-top-center" : "分享单曲：", "nei-top-right" : "+关注", "words" : "中国女人之美，在骨不在皮"}
+  {"photo" : "../img/index/主播1.jpg" ,"name" : "雾与晨" , "amount" : "14.2万粉丝" ,  "nei-top-right" : "+关注","picture1":"../img/friends/er1.jpg", "picture2":"../img/friends/er2.jpg", "picture3":"../img/friends/er3.jpg", "picture4":"../img/friends/er4.jpg", "picture5":"../img/friends/er5.jpg", "picture6":"../img/friends/er6.jpg", "picture7":"../img/friends/er7.jpg", "words" : "摇滚女神艾薇儿，浓妆淡抹总相宜"},
+  {"photo" : "../img/index/主播2.jpg" ,"name" : "猹弟" , "amount" : "13.2万粉丝" ,  "nei-top-right" : "+关注", "picture1":"../img/friends/lee.jpg", "picture2":"../img/friends/lee1.jpg", "picture3":"../img/friends/lee3.jpg", "picture4":"../img/friends/lee4.jpg", "picture5":"../img/friends/lee5.jpg", "picture6":"../img/friends/lee6.jpg", "picture7":"../img/friends/lee2.jpg","picture3":"../img/friends/lee3.jpg", "words" : "假期要烫李易峰的发型可以吗"},
+  {"photo" : "../img/index/主播3.jpg" ,"name" : "刘珂忆" , "amount" : "16.7万粉丝" , "nei-top-right" : "+关注", "words" : "惊艳了时光的颜","picture1":"../img/friends/man1.jpg", "picture2":"../img/friends/man2.jpg", "picture3":"../img/friends/man3.jpg", "picture4":"../img/friends/man4.jpg", "picture5":"../img/friends/man5.jpg", "picture6":"../img/friends/man6.jpg", "picture7":"../img/friends/man7.jpg"}
+
 ]
