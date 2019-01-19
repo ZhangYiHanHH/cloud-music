@@ -1,0 +1,35 @@
+#menue{
+    height: 50px;
+    width: 100%;
+    margin-bottom: 0px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+}
+.menue-a{
+    flex: 1px;
+    height: 50px;
+    display: flex;
+    flex-flow: column;
+}
+.menue-top{
+    width: 60px;
+    height: 20px;
+    margin-bottom: 0px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.menue-bottom1{
+    font-size: 12px;
+    color: #d32f2f;
+}
+.menue-bottom2{
+    font-size: 12px;
+    color:grey;
+}
+a{
+    margin-top: -3px;
+    height: 20px;
+}

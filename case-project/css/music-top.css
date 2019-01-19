@@ -1,0 +1,67 @@
+#music-top{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+}
+#top-left{
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/mymusic/云.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#top-center{
+    flex: 1px;
+    height: 30px;
+}
+#top-right{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 40px;
+    display: flex;
+    flex-flow: row;
+}
+#top-right div{
+    margin: auto 0 0 5px;;
+    width:2px;
+    background-color: white;
+    border-radius: 2%;
+}
+#top-right div:nth-child(1){
+    height: 13px;
+    animation: charge .5s infinite ;
+}
+#top-right div:nth-child(2){
+    height: 22px;
+    animation: charge .8s infinite ;
+}
+#top-right div:nth-child(3){
+    height: 16px;
+    animation: charge .9s infinite ;
+}
+#top-right div:nth-child(4){
+    height: 20px;
+    animation: charge .6s infinite ;
+}
+@keyframes charge {
+    30%{
+        height:25px;
+    }
+    50%{
+        height: 18px;
+    }
+    80%{
+        height: 0px;
+    }
+    100%{
+        height:13px;
+    }
+}

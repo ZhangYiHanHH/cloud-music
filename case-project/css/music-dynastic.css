@@ -1,0 +1,237 @@
+::-webkit-scrollbar{
+    display: none;
+}
+#music-dynastic{
+    flex: 1px;
+    width: 100%;
+    overflow:scroll;
+    /*display: flex;*/
+    flex-flow: column;
+    background-color: white;
+}
+#list{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+}
+.list-a{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.list-a-pict{
+    margin:10px auto auto 8px ;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.list-a-right{
+    flex: 1px;
+    width: 100%;
+    height:60px;
+    display: flex;
+    flex-flow: row;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.list-a-font1{
+    margin:10px auto auto 18px ;
+    height: 40px;
+    width: 80px;
+    font-size: 16px;
+    color: black;
+    line-height: 40px;
+}
+.list-a-font{
+    margin-left: 0;
+    margin:10px ;
+    width: 160px;
+    height: 40px;
+    display: flex;
+    flex-flow: row;
+
+}
+.list-a-font2{
+    width: 130px;
+    height: 40px;
+    font-size:13px;
+    color: gray;
+    line-height: 40px;
+    text-align: right;
+}
+.箭头{
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/mymusic/右箭头.svg");
+}
+#create{
+    height: 30px;
+    background-color:#E0E0E0;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+#xia-jiantou{
+    margin: 3px auto auto 5px;
+    height: 25px;
+    width: 25px;
+    background-image: url("../img/mymusic/下箭头.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.create-font{
+    height: 30px;
+    flex: 1px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #424242;
+}
+.point{
+    margin: 3px 5px auto auto;
+    height: 25px;
+    width: 25px;
+    background-image: url("../img/mymusic/三个点.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#favorite{
+    width: 98%;
+    height: 60px;
+    margin: 3px;
+    display: flex;
+    flex-flow: row;
+
+}
+#favorite-left{
+    margin-top: 3px;
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    background-image: url("../img/mymusic/半壶纱.jpg");
+
+}
+#fav-inner{
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    background-image: url("../img/mymusic/心.svg");
+}
+#favorite-center{
+    margin-left: 5px;
+    width:200px;
+    height: 60px;
+    display: flex;
+    flex-flow: column;
+}
+.centera{
+   height: 30px;
+    width:200px ;
+    font-size: 17px;
+    color: black;
+    line-height: 30px;
+}
+.centerb{
+    height: 30px;
+    width: 200px;
+    font-size: 10px;
+    color: #616161;
+    display: flex;
+    flex-flow: row;
+}
+.centerb-pict{
+    height:20px;
+    width: 20px;
+    background-image: url("../img/mymusic/下载完成.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+.centerb-font{
+    /*height: 25px;*/
+    font-size: 10px;
+    color: #616161;
+    line-height: 20px;
+}
+#favorite-right{
+    margin: 15px auto auto 18px;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: row;
+    border: 1px solid red;
+}
+.fav-right1{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    background-image: url("../img/mymusic/心动.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fav-right2{
+    height: 30px;
+    font-size: 12px;
+    color: red;
+    line-height: 30px;
+}
+#cut{
+    margin-left: 3px;
+    height: 60px;
+    width: 98%;
+    border:dashed 1px #E0E0E0;
+}
+#cut-pict{
+    height: 25px;
+    width: 25px;
+    background-image: url("../img/mymusic/截图.svg");
+}
+#cut-font{
+    margin-left: 4px;
+}
+#kuang{
+    width: 100%;
+    height: 8px;
+    margin-top: 20px;
+    background-color: #E0E0E0;
+}
+.tui{
+    width: 98%;
+    height: 30px;
+    margin-left: 3px;
+    display: flex;
+    flex-flow: row;
+}
+.tui-pict{
+    width:20px;
+    height: 20px;
+    margin-top:5px;
+    background-color: red;
+    border-radius: 50%;
+}
+.tui-inner{
+    height: 15px;
+    width: 15px;
+    background-image: url("../img/mymusic/心.svg");
+}
+.tui-font{
+    height: 20px;
+    margin-left: 4px;
+    font-weight: bolder;
+    margin-top: 6px;
+}

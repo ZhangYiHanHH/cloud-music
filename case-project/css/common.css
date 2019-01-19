@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.xy-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.border{
+    border: 1px black solid;
+}
+.pict{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.tuijian{
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-flow: column;
+}
+.tuijian-one{
+    width: 96%;
+    height: 130px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-left: 6px;
+    margin-right:6px;
+}
+.tuijian-a{
+    flex: 1px;
+    height: 130px;
+    display: flex;
+    flex-flow: column;
+}
+.tuijian-pict{
+    margin:0 3px 3px 3px;
+    width: 100px;
+    height: 80%;
+    border-radius: 3%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.erji{
+    position: absolute;
+    height: 15px;
+    width: 50px;
+    right: 4px;
+    display: flex;
+    flex-flow: row;
+}
+
+.erji-inner{
+    height: 15px;
+    width: 15px;
+    background-image: url("../img/mymusic/耳机.svg");
+}
+.erji-font{
+    font-size: 4px;
+    color: white;
+}
+.tuijian-font{
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+    color: black;
+    line-height: 15px;
+    margin: 0 3px 3px 3px;
+}

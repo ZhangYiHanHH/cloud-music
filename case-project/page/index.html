@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/container.css" rel="stylesheet">
+    <link href="../css/signal.css" rel="stylesheet">
+    <!--<link href="../css/search.css" rel="stylesheet">-->
+    <!--<link href="../css/title.css" rel="stylesheet">-->
+    <link href="../css/dynastic.css" rel="stylesheet">
+    <link href="../css/menue.css" rel="stylesheet">
+</head>
+<body>
+   <div class="container">
+       <div id="signal" class="">
+           <div id="signal-left" class="">
+               <div class="signal-area ">
+                   <div class=""></div>
+                   <div class=""></div>
+                   <div class=""></div>
+                   <div class=""></div>
+               </div>
+               <div class="operator xy-center">中国移动</div>
+               <div class="xg xy-center">4G</div>
+           </div>
+           <div id="signal-center" class="xy-center">14:52</div>
+           <div id="signal-right" class="">
+               <div id="battery" class="">
+                   <div id="battery-body" class="">
+                   </div>
+               </div>
+               <div id="battery-header" class="">
+
+               </div>
+           </div>
+       </div>
+       <div id="search" class=" xy-center">
+           <!--<div id="search-left" class="">-->
+               <!--<div class="search-left-huatong ">-->
+                   <!--<div class="search-left-music "></div>-->
+               <!--</div>-->
+           <!--</div>-->
+           <!--<div id="search-center" class=" xy-center">-->
+               <!--<div class="search-img "></div>-->
+               <!--<div class="search-font ">搜索音乐、视频、歌词、电台</div>-->
+
+           <!--</div>-->
+           <!--<div id="search-right" class="">-->
+               <!--<div></div>-->
+               <!--<div></div>-->
+               <!--<div></div>-->
+               <!--<div></div>-->
+           <!--</div>-->
+       </div>
+       <div id="title" class="">
+           <!--<div class="title-half1  xy-center">-->
+               <!--<div class="title-font">个性推荐</div>-->
+               <!--<div class="title-line "></div>-->
+           <!--</div>-->
+           <!--<div class="title-half2  xy-center ">主播电台</div>-->
+
+       </div>
+       <div id="dynastic" class="">
+
+
+       </div>
+
+       <div id="menue">
+           <!--<div id="chat-history" class="menu xy-center" data-normal="../img/icon/menu/chat-normal.svg" data-press="../img/icon/menu/chat-press.svg" data-url="../page/chat.html"></div>-->
+           <div class="menue-a  xy-center">
+               <div id="menue-top1" class="menue-top"  data-normal="../img/index/发现-normal.svg" data-press="../img/index/发现-press.svg" data-url="../page/-discover.html"></div>
+               <div class="menue-bottom2 ">发现</div>
+           </div>
+           <div class="menue-a  xy-center">
+               <div id="menue-top2" class="menue-top " data-normal="../img/index/视频.svg" data-press="../img/index/视频-press.svg" data-url="../page/-discover.html"></div>
+               <div class="menue-bottom2 ">视频</div>
+           </div>
+           <div  class="menue-a  xy-center ">
+               <a  class="" href="myMusic.html"><div id="menue-top3" class="menue-top " data-normal="../img/index/我的-normal.svg" data-press="../img/index/我的-press.svg" data-url="../page/-discover.html" ></div></a>
+               <div class="menue-bottom2 ">我的</div>
+           </div>
+           <div class="menue-a  xy-center">
+               <div id="menue-top4" class="menue-top " data-normal="../img/index/朋友-normal.svg" data-press="../img/index/朋友-press.svg" data-url="../page/-friends.html"></div>
+               <div class="menue-bottom2 ">朋友</div>
+           </div>
+           <div  class="menue-a  xy-center">
+               <a href="zhanghao.html"><div id="menue-top5" class="menue-top " data-normal="../img/index/账号-normal.svg" data-press="../img/index/账号-press.svg" data-url="../page/-discover.html"></div></a>
+               <div class="menue-bottom2 ">账号</div>
+           </div>
+       </div>
+
+   </div>
+
+</body>
+</html>
+<script src="../js/frame/jquery.js"></script>
+<script>
+    let index = 1;
+    let task;
+    function loadImg() {
+        if (index === 5) index = 1;
+        $(".top-pict").css("background-image", "url(../img/index/" + index + ".jpg)");
+        index++;
+    }
+
+    $(function(){ //当页面加载时
+
+        task = setInterval("loadImg()" , 1000); //启动定时器
+
+        $(".top-pict").mouseover(function(){ //鼠标经过
+            window.clearInterval(task);
+        });
+
+        $(".top-pict").mouseout(function(){ //鼠标移出
+            task = setInterval("loadImg()", 2000);
+        })
+
+
+
+    $("#search").load("../page/-index-search.html");
+    $("#menue-top1").click(function () {
+        $("#dynastic").load("../page/-index-search.html")
+    });
+    $("#menue-top4").click(function () {
+        $("#search").load("../page/-friends-search.html")
+    });
+
+    $("#dynastic").load("../page/-discover.html");
+    $("#menue-top1").click(function () {
+        $("#dynastic").load("../page/-discover.html")
+    });
+    $("#menue-top4").click(function () {
+        $("#dynastic").load("../page/-friends.html")
+    });
+
+    $("#title").load("../page/-index-title.html");
+    $("#menue-top1").click(function () {
+        $("#title").load("../page/-index-title.html")
+    });
+    $("#menue-top4").click(function () {
+        $("#title").load("../page/-friends-title.html")
+    });
+
+
+        $("#menue div").each(function() {
+            $(this).css('background-image' , 'url('+$(this).data("normal")+')').css('background-size' , '30%');
+            // console.log($(this).data("normal"));
+        });
+
+        //当点击每一个
+        $(".menue-top").click( function() {
+
+            //让所有按钮的背景  再次变为 normal 状态
+            $(".menue-top").each(function(){
+                $(this).css('background-image' , 'url('+$(this).data("normal")+')');
+            });
+            //让被点击的层切换为  press
+            $(this).css('background-image' , 'url('+$(this).data("press")+')');
+
+
+            $("#dynastic").load($(this).data("url"))
+
+        });
+
+    })
+</script>
