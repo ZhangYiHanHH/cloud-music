@@ -40,6 +40,7 @@
 }
 #play-bottom{
     margin-top: 7px;
+    margin-bottom: 10px;
     height: 40px;
     width: 100%;
     display: flex;

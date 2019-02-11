@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/play-container.css" rel="stylesheet">
+
+</head>
+<body>
+  <!--<audio controls></audio>-->
+  <!--<audio controls="controls" id="player" autoplay="autoplay"></audio>-->
+  <div class="container-top border">
+      <div id="pre" class="bgimg-center" style="background-image: url(../img/play/pre.svg)"></div>
+      <div id="play" class="bgimg-center" style="background-image: url(../img/play/play.svg)"></div>
+      <div id="pause" class="bgimg-center" style="background-image: url(../img/play/pause.svg)"></div>
+      <div id="next" class="bgimg-center" style="background-image: url(../img/play/next.svg)"></div>
+
+  </div>
+  <div class="container-bottom border">
+      <div id="current_time" class="border">00:00</div>
+      <div id="time-line" class="border">
+          <div id="point" class="border"></div>
+      </div>
+      <div id="duration" class="border">00:00</div>
+  </div>
+</body>
+<script src="../js/frame/jquery.js"></script>
+<script src="http://y.gtimg.cn/music/h5/player/player.js?max_age=2592000"></script>
+<script>
+    $(function(){
+        let task;
+        //初始化播放组件
+        let player = new QMplayer({ target: "auto" });
+        $("#play").click(function(){
+            player.play("003v4UL61IYlTY");
+            // console.log("+++")
+        });
+        $("#pause").click(function(){
+            player.pause();
+        })
+        $("#next").click(function(){
+            player.play("000qeAhg2Lj8sH");
+            // console.log("+++")
+
+        });
+        player.on("play", function () {
+
+            task = setInterval(function(){
+                let currentTime = Math.floor(player.currentTime/60)+":"+Math.ceil(player.currentTime%60);
+                let duration = Math.floor(player.duration/60)+":"+Math.floor(player.duration%60);
+                $("#current_time").html(currentTime);
+                $("#duration").html(duration);
+
+                let time_line_width = $("#time-line").width();
+                $("#point").css('left' ,  player.currentTime/player.duration * time_line_width - 4+"px" );
+
+            } , 500);
+
+            // console.log(player.data);
+        });
+        player.on("pause" , function() {
+            clearInterval(task);
+        });
+
+    })
+</script>
+</html>

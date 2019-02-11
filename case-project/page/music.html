@@ -5,6 +5,7 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/play-container.css" rel="stylesheet">
     <link href="../css/music-container.css" rel="stylesheet">
     <link href="../css/music-signal.css" rel="stylesheet">
     <link href="../css/top.css" rel="stylesheet">
@@ -101,7 +102,7 @@
 
            </div>
        </div>
-       <div id="center" class=" xy-center">
+       <div id="center" class=" xy-center ">
            <div class="CD border xy-center">
                <div class="CD1 border xy-center">
                    <div class="CD2 border xy-center">
@@ -138,20 +139,20 @@
              </div>
            </div>
        </div>
-       <div id="play" class="">
+       <div id="play1" class="">
            <div id="play-top" class="">
-               <div class="time ">00.00</div>
-               <div class="play-center">
-                   <div class="cir "></div>
-                   <div class="line"></div>
+               <div id="current_time" class="time">00.00</div>
+               <div id="time-line" class="">
+                   <div id="point" class=""></div>
                </div>
-               <div class="time">04:09</div>
+               <div id="duration" class="time">04:09</div>
            </div>
-           <div id="play-bottom" class=" xy-center">
+           <div id="play-bottom" class=" xy-center ">
                <div class=" pict1" style="background-image: url(../img/music/返回.svg)"></div>
-               <div class=" pict1"  style="background-image: url(../img/music/上一首.svg)"></div>
-               <div class=" pict1"  style="background-image: url(../img/music/播放.svg)"></div>
-               <div class=" pict1"  style="background-image: url(../img/music/下一首.svg)"></div>
+               <div id="pre" class=" pict1"  style="background-image: url(../img/music/上一首.svg)"></div>
+               <div id="play" class=" pict1"  style="background-image: url(../img/music/播放.svg)"></div>
+               <div id="pause" class=" pict1" style="background-image: url(../img/play/pause.svg)"></div>
+               <div id="next" class=" pict1"  style="background-image: url(../img/music/下一首.svg)"></div>
                <div class=" pict1"  style="background-image: url(../img/music/三条线.svg)"></div>
            </div>
        </div>
@@ -159,7 +160,7 @@
 </body>
 </html>
 <script src="../js/frame/jquery.js"></script>
-
+<script src="http://y.gtimg.cn/music/h5/player/player.js?max_age=2592000"></script>
 <script>
 
     $(function(){
@@ -170,6 +171,39 @@
         $("#control").click(() => {
             $("#play-panel").css('top' , '100%');
     });
+        let task;
+        //初始化播放组件
+        let player = new QMplayer({ target: "auto" });
+        $("#play").click(function(){
+            player.play("004EBcSN1rmJfI");
+            // console.log("+++")
+        });
+        $("#pause").click(function(){
+            player.pause();
+        });
+
+        $("#next").click(function(){
+            player.play("000qeAhg2Lj8sH");
+            // console.log("+++")
+
+        });
+        player.on("play", function () {
+
+            task = setInterval(function(){
+                let currentTime = Math.floor(player.currentTime/60)+":"+Math.ceil(player.currentTime%60);
+                let duration = Math.floor(player.duration/60)+":"+Math.floor(player.duration%60);
+                $("#current_time").html(currentTime);
+                $("#duration").html(duration);
+
+                let time_line_width = $("#time-line").width();
+                $("#point").css('left' ,  player.currentTime/player.duration * time_line_width - 1+"px" );
+            } , 500);
+
+            // console.log(player.data);
+        });
+        player.on("pause" , function() {
+            clearInterval(task);
+        });
     })
 
 </script>
